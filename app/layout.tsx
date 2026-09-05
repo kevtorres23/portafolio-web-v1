@@ -20,6 +20,8 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
+  // Base para resolver las imágenes Open Graph. Definir NEXT_PUBLIC_SITE_URL en producción.
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: `${site.name} — Diseñador y Desarrollador Web`,
   description: site.description,
   openGraph: {

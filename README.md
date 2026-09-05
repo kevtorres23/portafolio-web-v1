@@ -16,11 +16,13 @@ npm run build    # build de producción
 app/
   layout.tsx      Fuentes (Poppins, Caveat) y metadata
   page.tsx        Composición de la Portada
+  proyectos/[slug]/page.tsx   Detalle de proyecto (6 rutas estáticas)
   globals.css     Tokens de diseño en @theme
 components/
   layout/         Navbar, Footer
   sections/       Hero, About, Work, Contact
-  ui/             PillButton, ProjectCard, ToolCard, Icon, AccentText
+  project/        ProjectShowcase y sus piezas (Header, Cover, Sidebar, Info, Gallery)
+  ui/             PillButton, ProjectCard, ToolCard, Tag, Icon, AccentText
 lib/
   data/           Contenido (proyectos, herramientas, datos del sitio)
   hooks/          useScaleToFit
@@ -47,7 +49,14 @@ lleva un comentario con su variable equivalente en Figma.
 - **Iconos**: todos son assets exportados de Figma en `public/icons/`, con su
   color ya incluido en el SVG.
 
-## Pendiente
+- **Detalle de proyecto**: las seis pantallas comparten la plantilla
+  `ProjectShowcase`; solo cambian los datos de `detail` en
+  [`lib/data/projects.ts`](lib/data/projects.ts). Los textos de Description /
+  Objective / Results, las fechas largas y los enlaces son placeholders del
+  diseño: editarlos ahí basta para actualizar la página. `website` y `github`
+  son opcionales y su bloque desaparece si se omiten.
 
-Las rutas `/proyectos/[slug]` a las que enlazan las tarjetas aún no existen;
-se añadirán cuando estén listas las pantallas de detalle en Figma.
+## Variables de entorno
+
+- `NEXT_PUBLIC_SITE_URL` — URL pública del sitio, usada para resolver las
+  imágenes Open Graph. En local se usa `http://localhost:3000`.

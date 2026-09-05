@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="lucide/globe" clip-path="url(#clip0_0_42)">
+<path id="Vector" d="M19.25 10.5C19.25 15.3325 15.3325 19.25 10.5 19.25M19.25 10.5C19.25 5.66751 15.3325 1.75 10.5 1.75M19.25 10.5H1.75M10.5 19.25C5.66751 19.25 1.75 15.3325 1.75 10.5M10.5 19.25C8.25321 16.8909 7 13.7579 7 10.5C7 7.24215 8.25321 4.10913 10.5 1.75M10.5 19.25C12.7468 16.8909 14 13.7579 14 10.5C14 7.24215 12.7468 4.10913 10.5 1.75M1.75 10.5C1.75 5.66751 5.66751 1.75 10.5 1.75" stroke="#1E293B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_0_42">
+<rect width="21" height="21" fill="white"/>
+</clipPath>
+</defs>
+</svg>

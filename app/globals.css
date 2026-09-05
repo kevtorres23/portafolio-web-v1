@@ -20,6 +20,8 @@
   --color-subtle: #94a3b8; /* [gray5] iconos del footer      */
   --color-line: #e2e8f0; /* [gray7] bordes                 */
   --color-surface: #f8fafc; /* [gray9] fondo del footer       */
+  --color-surface-alt: #f1f5f9; /* [gray8] chips del Tech Stack   */
+  --color-prose: #475569; /* [gray3 en detalle] cuerpo de texto de las pantallas de proyecto */
 
   /* --- Superficies sobre el azul (Tool Cards) --- */
   --color-tool: rgba(17, 19, 25, 0.1);

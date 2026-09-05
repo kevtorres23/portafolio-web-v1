@@ -8,7 +8,7 @@ type Variant = "brand" | "deep" | "white";
  * Tamaños concretos del diseño. Cada uno corresponde a un lugar de la
  * Portada, con sus valores exactos de Figma bajo `lg:`.
  */
-type Size = "nav" | "hero" | "pill" | "icon";
+type Size = "nav" | "hero" | "pill" | "icon" | "back";
 
 const variants: Record<Variant, string> = {
   brand: "bg-brand text-white hover:bg-brand-deep",
@@ -26,6 +26,8 @@ const sizes: Record<Size, string> = {
   pill: "gap-[7px] px-5 py-3 text-[16px] font-medium",
   // Tarjeta de proyecto: solo la flecha
   icon: "p-2.5 lg:p-3",
+  // Detalle de proyecto: "Volver" (nodo 1:136, 45px de alto)
+  back: "gap-2.5 px-[25px] py-3 text-[14px] font-semibold tracking-[-0.42px]",
 };
 
 type PillButtonProps = {
@@ -39,9 +41,9 @@ type PillButtonProps = {
 };
 
 /**
- * Botón/enlace redondeado. Cubre los cinco usos de la Portada: el CTA del
+ * Botón/enlace redondeado. Cubre los cinco usos de la Portada (el CTA del
  * navbar, el del hero, las tres píldoras de contacto y el botón circular de
- * las tarjetas de proyecto.
+ * las tarjetas de proyecto) más el botón "Volver" del detalle de proyecto.
  *
  * Renderiza `<Link>` para rutas internas y `<a>` para enlaces externos,
  * `mailto:` y anclas.

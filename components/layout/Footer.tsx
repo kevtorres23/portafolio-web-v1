@@ -27,7 +27,7 @@ export default function Footer() {
 
         <div className="flex flex-col items-start gap-5 lg:items-end">
           <nav className="flex items-center gap-8 text-[16px] font-medium tracking-[-0.54px] text-strong lg:gap-10 lg:text-[18px]">
-            <Link href="#trabajo" className="transition-colors hover:text-brand">
+            <Link href="/#trabajo" className="transition-colors hover:text-brand">
               Mis proyectos
             </Link>
             <Link href={site.cv} className="transition-colors hover:text-brand">
