@@ -24,7 +24,13 @@ export default function ProjectCard({ project }: { project: Project }) {
           src={project.image}
           alt={`Vista previa del proyecto ${project.title}`}
           fill
-          sizes="(max-width: 1024px) 100vw, 615px"
+          /* Sin optimizar: PNG original a resolución completa, para que
+             aguante el zoom. `sizes` queda como documentación del ancho real
+             —la rejilla es (100vw − 160 de padding − 70 de gap) / 2, así que
+             la tarjeta crece con el viewport— y con el 56vw extra que cubre
+             el ancho que `object-cover` recorta en capturas 16:9. */
+          unoptimized
+          sizes="(min-width: 1024px) calc(56vw - 128px), 100vw"
           className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
         />
       </div>

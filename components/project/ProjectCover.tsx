@@ -13,7 +13,13 @@ export default function ProjectCover({ src, alt }: { src: string; alt: string })
         alt={alt}
         fill
         priority
-        sizes="(max-width: 1024px) 100vw, 1240px"
+        /* Sin optimizar: se sirve el PNG original a resolución completa para
+           que la imagen aguante el zoom del navegador. `sizes` queda como
+           documentación del ancho real (el contenedor menos los márgenes, no
+           los 1240px fijos del diseño) y vuelve a tener efecto si algún día
+           se reactiva el optimizador. */
+        unoptimized
+        sizes="(min-width: 1024px) calc(100vw - 200px), 100vw"
         className="object-cover object-top"
       />
     </div>

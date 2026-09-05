@@ -80,6 +80,7 @@ export default function HeroDesktop() {
             src="/images/kevin.png"
             alt="Retrato de Kevin Torres"
             priority
+            unoptimized
             width={738}
             height={830}
             className="absolute max-w-none"
