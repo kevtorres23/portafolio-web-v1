@@ -15,7 +15,7 @@ import { heroAnnotations } from "@/lib/data/site";
  */
 export default function HeroMobile() {
   return (
-    <div className="flex flex-col items-center gap-8 bg-white px-5 py-12 text-center sm:gap-10 sm:py-16">
+    <div className="flex flex-col items-center gap-8 bg-white px-5 pt-12 text-center sm:gap-10 sm:pt-16">
       <div className="flex flex-col gap-1">
         <p className="text-[22px] tracking-[-0.05em] text-body sm:text-[28px]">
           ¡Hola! Mi nombre es Kevin.
