@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Tokens de diseño del portafolio.
+   Los nombres entre corchetes son las variables equivalentes del archivo de
+   Figma, para poder rastrear cada color hasta el diseño original.
+   --------------------------------------------------------------------------- */
+@theme {
+  /* --- Marca --- */
+  --color-brand: #2563eb; /* azul principal: botones, sección "Me fascina...", ícono de tarjeta */
+  --color-brand-deep: #2b4de6; /* azul del CTA "Mi CV en PDF" y de los acentos manuscritos */
+  --color-brand-green: #2fcd76; /* verde de acento en texto: "Desarrollador", "frontend" */
+  --color-brand-green-cta: #27c46d; /* verde de fondo de "¡Tengamos una charla!" */
+
+  /* --- Neutros --- */
+  --color-ink: #0f172a; /* títulos                        */
+  --color-strong: #1e293b; /* [gray1] texto enfatizado       */
+  --color-body: #334155; /* [gray3] párrafos               */
+  --color-muted: #64748b; /* [gray4] texto secundario       */
+  --color-subtle: #94a3b8; /* [gray5] iconos del footer      */
+  --color-line: #e2e8f0; /* [gray7] bordes                 */
+  --color-surface: #f8fafc; /* [gray9] fondo del footer       */
+
+  /* --- Superficies sobre el azul (Tool Cards) --- */
+  --color-tool: rgba(17, 19, 25, 0.1);
+  --color-tool-border: rgba(255, 255, 255, 0.3);
+
+  /* --- Tipografías (definidas en app/layout.tsx con next/font) --- */
+  --font-sans: var(--font-poppins);
+  --font-hand: var(--font-caveat);
+
+  /* --- Sombras --- */
+  /* Sombra multicapa de la foto del hero (nodo 1:55) */
+  --shadow-portrait:
+    402.257px 273.938px 136.248px 0px rgba(0, 0, 0, 0),
+    257.358px 175.176px 124.714px 0px rgba(0, 0, 0, 0.02),
+    144.899px 98.762px 105.25px 0px rgba(0, 0, 0, 0.08),
+    64.159px 43.974px 77.856px 0px rgba(0, 0, 0, 0.13),
+    15.86px 10.813px 42.533px 0px rgba(0, 0, 0, 0.15);
+  /* Versión atenuada para la variante móvil del hero */
+  --shadow-portrait-sm:
+    24px 16px 48px 0px rgba(0, 0, 0, 0.12),
+    8px 6px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-body);
+  /* Ninguna sección debe generar scroll horizontal en móvil. */
+  overflow-x: hidden;
+}
+
+/* Respeta la preferencia del sistema de reducir movimiento. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
