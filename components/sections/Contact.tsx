@@ -1,5 +1,7 @@
+import { ChatCircleDots } from "@phosphor-icons/react/dist/ssr";
 import Icon from "@/components/ui/Icon";
 import PillButton from "@/components/ui/PillButton";
+import SectionTag from "@/components/ui/SectionTag";
 import { site } from "@/lib/data/site";
 
 /* En el diseño estos rótulos están en inglés ("Email me", "Let's chat in
@@ -17,6 +19,7 @@ export default function Contact() {
     <section className="overflow-hidden bg-brand-green-cta px-5 py-24 lg:px-[100px] lg:py-[200px]">
       <div className="flex flex-col items-center gap-[30px]">
         <div className="flex flex-col items-center gap-2.5 text-center text-white lg:gap-2.5">
+          <SectionTag text="Contacto" icon={ChatCircleDots} />
           <h2 className="text-[36px] font-semibold leading-[1.15] tracking-[-1.6px] lg:text-[64px] lg:tracking-[-3.2px]">
             ¡Tengamos una charla!
           </h2>

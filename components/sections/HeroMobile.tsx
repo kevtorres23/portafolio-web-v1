@@ -26,6 +26,24 @@ export default function HeroMobile() {
         </p>
       </div>
 
+      <ul className="flex w-full max-w-md flex-col gap-7 sm:grid sm:max-w-none sm:grid-cols-3 sm:gap-6">
+        {heroAnnotations.map((annotation) => (
+          <li key={annotation.id} className="flex flex-col items-center gap-2">
+            <p className="font-hand text-[24px] tracking-[0.05em] text-muted sm:text-[28px]">
+              {annotation.script}
+            </p>
+            <p className="text-[16px] font-bold text-black sm:text-[18px]">
+              <AccentText parts={annotation.parts} />
+            </p>
+          </li>
+        ))}
+      </ul>
+
+      <PillButton href="#trabajo" variant="brand" size="hero">
+        Mi trabajo
+        <Icon src="/icons/arrow-right.svg" size={24} className="rotate-90" />
+      </PillButton>
+
       {/* Retrato sobre la mancha azul. `--pw` es el ancho del retrato: todo lo
           demás (alto visible y geometría de la mancha) se deriva de él con los
           mismos factores que en el lienzo de escritorio, así que basta cambiar
@@ -36,7 +54,11 @@ export default function HeroMobile() {
           className="absolute left-[calc(var(--pw)*-0.17548)] top-[calc(var(--pw)*0.10948)] block h-[calc(var(--pw)*1.3119)] w-[calc(var(--pw)*1.2303)]"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icons/hero-blob.svg" alt="" className="block h-full w-full" />
+          <img
+            src="/icons/hero-blob.svg"
+            alt=""
+            className="block h-full w-full"
+          />
         </span>
 
         {/* El retrato completo es más alto que la caja; se recorta por abajo,
@@ -53,24 +75,6 @@ export default function HeroMobile() {
           />
         </span>
       </div>
-
-      <ul className="flex w-full max-w-md flex-col gap-7 sm:grid sm:max-w-none sm:grid-cols-3 sm:gap-6">
-        {heroAnnotations.map((annotation) => (
-          <li key={annotation.id} className="flex flex-col items-center gap-2">
-            <p className="font-hand text-[24px] tracking-[0.05em] text-muted sm:text-[28px]">
-              {annotation.script}
-            </p>
-            <p className="text-[16px] font-bold text-black sm:text-[18px]">
-              <AccentText parts={annotation.parts} />
-            </p>
-          </li>
-        ))}
-      </ul>
-
-      <PillButton href="#trabajo" variant="brand" size="hero">
-        Mi trabajo
-        <Icon src="/icons/arrow-right.svg" size={24} />
-      </PillButton>
     </div>
   );
 }

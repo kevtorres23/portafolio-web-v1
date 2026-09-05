@@ -1,12 +1,15 @@
+import { Toolbox } from "@phosphor-icons/react/dist/ssr";
 import ToolCard from "@/components/ui/ToolCard";
 import { tools } from "@/lib/data/tools";
+import SectionTag from "../ui/SectionTag";
 
 /** Sección azul "Me fascina el proceso..." (nodo 1:75). */
 export default function About() {
   return (
     <section className="bg-brand px-5 py-20 lg:px-20 lg:py-[200px]">
       <div className="flex flex-col items-start justify-between gap-12 lg:flex-row lg:gap-10">
-        <div className="flex max-w-[564px] flex-col justify-center gap-3 text-white lg:gap-4">
+        <div className="flex max-w-[564px] flex-col md:items-start items-center justify-center gap-3 text-white lg:gap-4">
+          <SectionTag text="Mis conocimientos" icon={Toolbox} />
           <h2 className="text-[32px] font-normal leading-[1.4] tracking-[-1.2px] lg:text-[48px] lg:leading-[1.5] lg:tracking-[-2.4px]">
             Me fascina el proceso de diseñar algo
             para después <strong className="font-bold">construirlo</strong>.

@@ -11,8 +11,8 @@ type Variant = "brand" | "deep" | "white";
 type Size = "nav" | "hero" | "pill" | "icon" | "back";
 
 const variants: Record<Variant, string> = {
-  brand: "bg-brand text-white hover:bg-brand-deep",
-  deep: "bg-brand-deep text-white hover:bg-brand",
+  brand: "bg-brand text-white hover:bg-brand",
+  deep: "bg-brand text-white hover:bg-brand",
   white: "bg-white text-strong hover:bg-surface",
 };
 

@@ -159,7 +159,7 @@ export default function HeroDesktop() {
         <div className="absolute" style={{ left: 993, top: 449 }}>
           <PillButton href="#trabajo" variant="brand" size="hero">
             Mi trabajo
-            <Icon src="/icons/arrow-right.svg" size={36} />
+            <Icon src="/icons/arrow-right.svg" size={36} className="rotate-90" />
           </PillButton>
         </div>
       </div>

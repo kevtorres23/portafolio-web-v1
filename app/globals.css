@@ -7,7 +7,7 @@
    --------------------------------------------------------------------------- */
 @theme {
   /* --- Marca --- */
-  --color-brand: #2563eb; /* azul principal: botones, sección "Me fascina...", ícono de tarjeta */
+  --color-brand: #0284c7; /* azul principal: botones, sección "Me fascina...", ícono de tarjeta */
   --color-brand-deep: #2b4de6; /* azul del CTA "Mi CV en PDF" y de los acentos manuscritos */
   --color-brand-green: #2fcd76; /* verde de acento en texto: "Desarrollador", "frontend" */
   --color-brand-green-cta: #27c46d; /* verde de fondo de "¡Tengamos una charla!" */
