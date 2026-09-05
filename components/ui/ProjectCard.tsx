@@ -35,8 +35,8 @@ export default function ProjectCard({ project }: { project: Project }) {
         />
       </div>
 
-      <div className="flex items-center justify-between gap-4">
-        <div className="flex flex-col justify-center gap-3 lg:gap-5">
+      <div className="flex items-center justify-between gap-2">
+        <div className="flex flex-col justify-center gap-2 lg:gap-3">
           <p className="text-[20px] font-semibold tracking-[-0.6px] text-ink lg:text-[24px]">
             {project.title}
           </p>

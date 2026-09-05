@@ -18,6 +18,7 @@ app/
   page.tsx        Composición de la Portada
   proyectos/[slug]/page.tsx   Detalle de proyecto (6 rutas estáticas)
   globals.css     Tokens de diseño en @theme
+  icon.svg        Favicon: la "k" de Poppins Bold sobre el azul de marca
 components/
   layout/         Navbar, Footer
   sections/       Hero, About, Work, Contact
@@ -44,6 +45,11 @@ lleva un comentario con su variable equivalente en Figma.
   donde el factor nunca baja de ~0.71). `HeroMobile` usa un layout apilado con
   tamaños propios legibles. Se alternan por CSS, no por JavaScript, para que
   ambas se rendericen en servidor.
+- **Retrato del hero**: `public/images/kevin.png` es un recorte sin fondo que se
+  coloca entero sobre la mancha azul (`public/icons/hero-blob.svg`), sin caja
+  de recorte ni sombra; solo lo corta por abajo el borde del lienzo. El SVG de
+  la mancha se exportó con la rotación del diseño ya aplicada para no tener que
+  recalcularla en CSS.
 - **Tipografías**: solo Poppins y Caveat. Los labels de las Tool Cards usan
   Poppins SemiBold en lugar del Figtree del diseño.
 - **Iconos**: todos son assets exportados de Figma en `public/icons/`, con su
@@ -52,9 +58,11 @@ lleva un comentario con su variable equivalente en Figma.
 - **Detalle de proyecto**: las seis pantallas comparten la plantilla
   `ProjectShowcase`; solo cambian los datos de `detail` en
   [`lib/data/projects.ts`](lib/data/projects.ts). Los textos de Description /
-  Objective / Results, las fechas largas y los enlaces son placeholders del
-  diseño: editarlos ahí basta para actualizar la página. `website` y `github`
-  son opcionales y su bloque desaparece si se omiten.
+  Objective / Results salen del archivo de Figma: editarlos ahí basta para
+  actualizar la página. Un `\n\n` dentro de `body` equivale al renglón en
+  blanco del diseño y se renderiza como un párrafo aparte. `website` y `figma`
+  son opcionales y su bloque desaparece si se omiten (Sadasi y Correos de
+  México no tienen sitio publicado, así que solo muestran el de Figma).
 
 ## Variables de entorno
 

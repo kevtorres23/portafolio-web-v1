@@ -5,11 +5,13 @@ export const site = {
   email: "kevintu236@gmail.com",
   description:
     "Portafolio de Kevin Torres, diseñador UI/UX y desarrollador web frontend. Diseño y construyo experiencias digitales.",
+  /* Lo sirve `public/cv-kevin-torres.pdf`; el archivo debe existir ahí para que
+     funcionen el botón del Navbar y el enlace del Footer. */
   cv: "/cv-kevin-torres.pdf",
   links: {
-    linkedin: "https://www.linkedin.com/in/kevintorres",
-    github: "https://github.com/kevintorres",
-    discord: "https://discord.com/users/kevintorres",
+    linkedin: "https://www.linkedin.com/in/kevin-torres-urbina/",
+    github: "https://github.com/kevtorres23",
+    discord: "https://discord.com/users/764633985280114728",
   },
 } as const;
 

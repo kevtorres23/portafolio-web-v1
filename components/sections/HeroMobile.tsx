@@ -26,20 +26,32 @@ export default function HeroMobile() {
         </p>
       </div>
 
-      <div
-        className="relative w-[220px] shrink-0 overflow-hidden sm:w-[280px]"
-        style={{ aspectRatio: "354 / 515", boxShadow: "var(--shadow-portrait-sm)" }}
-      >
-        <Image
-          src="/images/kevin.png"
-          alt="Retrato de Kevin Torres"
-          priority
-          unoptimized
-          width={738}
-          height={830}
-          className="absolute max-w-none"
-          style={{ width: "208.49%", height: "161.23%", left: "-58.51%", top: "-7.65%" }}
-        />
+      {/* Retrato sobre la mancha azul. `--pw` es el ancho del retrato: todo lo
+          demás (alto visible y geometría de la mancha) se deriva de él con los
+          mismos factores que en el lienzo de escritorio, así que basta cambiar
+          esa variable para reescalar el bloque. */}
+      <div className="relative h-[calc(var(--pw)*1.375)] w-[var(--pw)] shrink-0 [--pw:240px] sm:[--pw:300px]">
+        <span
+          aria-hidden
+          className="absolute left-[calc(var(--pw)*-0.17548)] top-[calc(var(--pw)*0.10948)] block h-[calc(var(--pw)*1.3119)] w-[calc(var(--pw)*1.2303)]"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/icons/hero-blob.svg" alt="" className="block h-full w-full" />
+        </span>
+
+        {/* El retrato completo es más alto que la caja; se recorta por abajo,
+            como en escritorio. */}
+        <span className="absolute inset-0 block overflow-hidden">
+          <Image
+            src="/images/kevin.png"
+            alt="Retrato de Kevin Torres"
+            priority
+            unoptimized
+            width={1909}
+            height={3691}
+            className="absolute left-0 top-0 h-auto w-full max-w-none"
+          />
+        </span>
       </div>
 
       <ul className="flex w-full max-w-md flex-col gap-7 sm:grid sm:max-w-none sm:grid-cols-3 sm:gap-6">

@@ -65,28 +65,31 @@ export default function HeroDesktop() {
           transformOrigin: "top center",
         }}
       >
-        {/* Retrato */}
-        <div
-          className="absolute overflow-hidden"
-          style={{
-            left: 543,
-            top: 213,
-            width: 354,
-            height: 515,
-            boxShadow: "var(--shadow-portrait)",
-          }}
+        {/* Mancha azul del fondo (nodo 15:277). El SVG ya viene con la rotación
+            del diseño aplicada, así que aquí solo se posiciona. */}
+        <span
+          aria-hidden
+          className="absolute block"
+          style={{ left: 473.74, top: 250.4, width: 580.9, height: 619.38 }}
         >
-          <Image
-            src="/images/kevin.png"
-            alt="Retrato de Kevin Torres"
-            priority
-            unoptimized
-            width={738}
-            height={830}
-            className="absolute max-w-none"
-            style={{ width: "208.49%", height: "161.23%", left: "-58.51%", top: "-7.65%" }}
-          />
-        </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/icons/hero-blob.svg" alt="" className="block h-full w-full" />
+        </span>
+
+        {/* Retrato (nodo 1:55). El PNG ya viene recortado sin fondo, así que se
+            coloca entero sobre la mancha: sin caja de recorte ni sombra. Solo
+            lo recorta por abajo el `overflow-hidden` del lienzo, igual que en
+            el diseño. */}
+        <Image
+          src="/images/kevin.png"
+          alt="Retrato de Kevin Torres"
+          priority
+          unoptimized
+          width={1909}
+          height={3691}
+          className="absolute max-w-none"
+          style={{ left: 556.55, top: 198.71, width: 472.14, height: 912.85 }}
+        />
 
         {/* Flechas curvas */}
         {arrows.map((arrow) => (

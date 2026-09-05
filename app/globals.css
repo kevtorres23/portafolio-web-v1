@@ -31,18 +31,6 @@
   --font-sans: var(--font-poppins);
   --font-hand: var(--font-caveat);
 
-  /* --- Sombras --- */
-  /* Sombra multicapa de la foto del hero (nodo 1:55) */
-  --shadow-portrait:
-    402.257px 273.938px 136.248px 0px rgba(0, 0, 0, 0),
-    257.358px 175.176px 124.714px 0px rgba(0, 0, 0, 0.02),
-    144.899px 98.762px 105.25px 0px rgba(0, 0, 0, 0.08),
-    64.159px 43.974px 77.856px 0px rgba(0, 0, 0, 0.13),
-    15.86px 10.813px 42.533px 0px rgba(0, 0, 0, 0.15);
-  /* Versión atenuada para la variante móvil del hero */
-  --shadow-portrait-sm:
-    24px 16px 48px 0px rgba(0, 0, 0, 0.12),
-    8px 6px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 html {

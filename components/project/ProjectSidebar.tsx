@@ -33,7 +33,9 @@ function ExternalLink({ link, className }: { link: ProjectLink; className: strin
       href={link.href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`text-[15px] font-medium transition-opacity hover:opacity-70 ${className}`}
+      /* `break-words`: algunos rótulos son dominios largos y la columna solo
+         mide 150px. */
+      className={`break-words text-[15px] font-medium transition-opacity hover:opacity-70 ${className}`}
     >
       {link.label}
     </a>
@@ -71,9 +73,9 @@ export default function ProjectSidebar({ detail }: { detail: ProjectDetail }) {
         </SidebarBlock>
       )}
 
-      {detail.github && (
-        <SidebarBlock heading="GitHub" icon="/icons/github-dark.svg">
-          <ExternalLink link={detail.github} className="text-brand" />
+      {detail.figma && (
+        <SidebarBlock heading="Figma" icon="/icons/figma-dark.svg">
+          <ExternalLink link={detail.figma} className="text-brand" />
         </SidebarBlock>
       )}
     </aside>

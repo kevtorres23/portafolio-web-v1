@@ -19,10 +19,10 @@ const variants: Record<Variant, string> = {
 const sizes: Record<Size, string> = {
   // Navbar: "Mi CV en PDF". `leading-none` reproduce el recorte de caja de
   // texto de Figma, sin el cual la barra crecería de 94px a 108px.
-  nav: "px-5 py-2.5 text-[15px] font-medium tracking-[-0.9px] lg:px-[30px] lg:py-[17px] lg:text-[18px] lg:leading-none",
+  nav: "px-5 py-2.5 text-[15px] font-medium tracking-[-0.9px] lg:px-[30px] lg:py-[17px] lg:text-[16px] lg:leading-none",
   // Hero: "Mi trabajo"
-  hero: "gap-2.5 px-6 py-3 text-[18px] font-semibold tracking-[-1.2px] lg:px-[30px] lg:py-[15px] lg:text-[24px]",
-  // Contacto: "Email me", "Let's chat in Discord", "My LinkedIn"
+  hero: "gap-2.5 px-6 py-3 text-[18px] font-medium tracking-[-1.2px] lg:px-[30px] lg:py-[15px] lg:text-[24px]",
+  // Contacto: "Escríbeme", "Hablemos en Discord", "Mi LinkedIn"
   pill: "gap-[7px] px-5 py-3 text-[16px] font-medium",
   // Tarjeta de proyecto: solo la flecha
   icon: "p-2.5 lg:p-3",

@@ -2,10 +2,13 @@ import Icon from "@/components/ui/Icon";
 import PillButton from "@/components/ui/PillButton";
 import { site } from "@/lib/data/site";
 
+/* En el diseño estos rótulos están en inglés ("Email me", "Let's chat in
+   Discord", "My LinkedIn"); aquí van en español para no mezclar idiomas con el
+   resto de la página. */
 const channels = [
-  { label: "Email me", href: `mailto:${site.email}`, icon: "/icons/mail.svg" },
-  { label: "Let's chat in Discord", href: site.links.discord, icon: "/icons/discord.svg" },
-  { label: "My LinkedIn", href: site.links.linkedin, icon: "/icons/linkedin-pill.svg" },
+  { label: "Escríbeme", href: `mailto:${site.email}`, icon: "/icons/mail.svg" },
+  { label: "Hablemos en Discord", href: site.links.discord, icon: "/icons/discord.svg" },
+  { label: "Mi LinkedIn", href: site.links.linkedin, icon: "/icons/linkedin-pill.svg" },
 ];
 
 /** Sección verde "¡Tengamos una charla!" (nodo 1:99). */
